@@ -1,0 +1,29 @@
+---
+swagger: '2.0'
+info:
+  title: Dogs spec
+  version: 0.0.1
+basePath: /api
+paths:
+  /dog/{id}:
+    get:
+      tags:
+        - dogs
+      operationId: getDog
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: integer
+          format: int64
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/Dog'
+definitions:
+  Dog:
+    type: object
+    properties:
+      value:
+        type: string

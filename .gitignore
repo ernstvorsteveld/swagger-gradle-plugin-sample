@@ -1,0 +1,7 @@
+.gradle/
+.idea/
+classes/
+out/
+*.iml
+consumer/build/
+producer/build/tmp

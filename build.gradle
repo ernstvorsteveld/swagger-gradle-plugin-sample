@@ -1,0 +1,8 @@
+plugins {
+    id 'idea'
+}
+
+allprojects {
+    group 'com.github.slamdev'
+    version '0.0.1-SNAPSHOT'
+}
