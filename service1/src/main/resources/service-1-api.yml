@@ -1,0 +1,72 @@
+---
+swagger: '2.0'
+info:
+  title: Main spec
+  version: 0.0.1
+x-package-name: com.github.slamdev.sample.service1.api
+x-api-name-prefix: SampleService1
+x-path-variable-name: sample.service1.url
+basePath: /api
+paths:
+  /values/{id}:
+    get:
+      operationId: getValues
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: integer
+          format: int64
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Value'
+    post:
+      operationId: createValue
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: integer
+          format: int64
+        - name: value
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Value'
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/Value'
+definitions:
+  Value:
+    type: object
+    properties:
+      name:
+        $ref: '#/definitions/Name'
+      value:
+        type: string
+      created:
+        type: string
+        format: date-time
+      num:
+        type: number
+      uuid:
+        type: string
+        format: uuid
+      eventType:
+        type: string
+        description: Event Type
+        enum:
+          - A
+          - B
+          - C
+  Name:
+    type: string
+    enum:
+      - FIRST
+      - LAST
