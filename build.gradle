@@ -6,8 +6,8 @@ buildscript {
     }
     dependencies {
 //        classpath 'org.springframework.boot:spring-boot-gradle-plugin:1.5.8.RELEASE'
-        classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.0.0.M5'
-        classpath "gradle.plugin.com.github.slamdev.swagger:swagger-gradle-plugin:0.0.32"
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.0.0.RC1'
+        classpath 'gradle.plugin.com.github.slamdev.swagger:swagger-gradle-plugin:0.0.40'
     }
 }
 
